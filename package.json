@@ -1,0 +1,22 @@
+{
+  "name": "freight-codes",
+  "description": "Useful freight code lookup library.",
+  "version": "1.0.0",
+  "author": "Robb Lovell",
+  "bugs": {
+    "web": "http://github.com/robblovell/freight-codes/issues"
+  },
+  "main": "./lib/index.js",
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/robblovell/freight-codes.git"
+  },
+  "scripts": {
+    "test": "istanbul cover --print both -- vows --spec ./tests/lookup.js"
+  },
+  "devDependencies": {
+    "istanbul": "~0.3.13",
+    "vows": "^0.8.1"
+  }
+}
