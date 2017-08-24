@@ -16,6 +16,18 @@ const tests = {
             assert.equal(nmfc.sub, " ");
         }
     },
+    'valid NMFC with leading 0 returns object': {
+        topic: function () {
+            return nmfc.lookup('037530');
+        },
+        'should find by NMFC': function (nmfc) {
+            assert.equal(nmfc.classCode, "85.00");
+            assert.equal(nmfc.description, "Balusters / wood railing, in boxes or crates");
+            assert.equal(nmfc.item, "Building: Wood/ Material");
+            assert.equal(nmfc.nmfc, "037530");
+            assert.equal(nmfc.sub, " ");
+        }
+    },
     'invalid NMFC returns null': {
         topic: function () {
             return nmfc.lookup("11111");

@@ -15,11 +15,12 @@ const fixNMFC = (nmfc) => {
 data.forEach((line, num) => {
     line = line.split('\t');
     if (line.length > 1) {
-        NMFCCodes[line[3]] = {
+        const nmfc = fixNMFC(line[3]);
+        NMFCCodes[nmfc] = {
             item: line[0],
             description: line[1].replace(/\"/g,""),
             classCode: fixClassCode(line[2]),
-            nmfc: fixNMFC(line[3]),
+            nmfc: nmfc,
             sub: line[4]
         }
     }
